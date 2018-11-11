@@ -63,7 +63,7 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each {|key, holiday_array|
-  puts "#{key}:"
+  puts "#{key.capitalize}:"
   holiday_array.each{|holiday, array|
     things = ""
     array.each{|supply|
@@ -79,10 +79,3 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 
 end
-
-
-
-
-
-
-
