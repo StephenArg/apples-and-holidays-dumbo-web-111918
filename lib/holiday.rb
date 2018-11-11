@@ -63,23 +63,26 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each {|key, holiday_array|
-  puts "#{key.capitalize}:"
-  holiday_array.each{|holiday, array|
-    things = ""
-    array.each{|supply|
-    things += supply
-    things += ", "}
-    last_index = (things.length) - 1
-    penultimate_index = (things.length) - 2
-    things.slice!(last_index)
-    things.slice!(penultimate_index)
-    holiday1 = holiday.to_s
-    if holiday1.include?("_")
-      temp_list = holiday1.split("_")
-      temp_list.each{|x| x.capitalize!}
-      holiday1 = temp_list.join(" ")
-    end
-    puts "  #{holiday1.capitalize}: #{things}"}}
+    puts "#{key.capitalize}:"
+    holiday_array.each{|holiday, array|
+      things = ""
+      array.each{|supply|
+        things += supply
+        things += ", "}
+      last_index = (things.length) - 1
+      penultimate_index = (things.length) - 2
+      things.slice!(last_index)
+      things.slice!(penultimate_index)
+      holiday1 = holiday.to_s
+      if holiday1.include?("_")
+        temp_list = holiday1.split("_")
+        temp_list.each{|x| x.capitalize!}
+        holiday1 = temp_list.join(" ")
+        puts "  #{holiday1}: #{things}"
+      else
+        puts "  #{holiday1.capitalize}: #{things}"
+      end
+    }}
 end
 
 def all_holidays_with_bbq(holiday_hash)
