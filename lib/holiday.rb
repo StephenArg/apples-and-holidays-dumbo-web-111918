@@ -75,7 +75,9 @@ def all_supplies_in_holidays(holiday_hash)
     things.slice!(penultimate_index)
     holiday1 = holiday.to_s
     if holiday1.include?("_")
-      holiday1 = holiday1.sub!("_"," ")
+      temp_list = holiday1.split("_")
+      temp_list.each{|x| x.capitalize}
+      holiday1 = temp_list.join(" ")
     end
     puts "  #{holiday1.capitalize}: #{things}"}}
 end
