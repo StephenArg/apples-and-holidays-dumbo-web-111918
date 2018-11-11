@@ -76,7 +76,7 @@ def all_supplies_in_holidays(holiday_hash)
     holiday1 = holiday.to_s
     if holiday1.include?("_")
       temp_list = holiday1.split("_")
-      temp_list.each{|x| x.capitalize}
+      temp_list.each{|x| x.capitalize!}
       binding.pry
       holiday1 = temp_list.join(" ")
     end
