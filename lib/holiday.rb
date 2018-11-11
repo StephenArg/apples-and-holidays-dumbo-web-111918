@@ -73,7 +73,7 @@ def all_supplies_in_holidays(holiday_hash)
     penultimate_index = (things.length) - 2
     things.slice!(last_index)
     things.slice!(penultimate_index)
-    if holiday.include? ("_")
+    if holiday.include?("_")
       holiday1 = holiday.sub!("_"," ")
     else
       holiday1 = holiday
