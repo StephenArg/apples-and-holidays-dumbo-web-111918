@@ -78,7 +78,6 @@ def all_supplies_in_holidays(holiday_hash)
       temp_list = holiday1.split("_")
       temp_list.each{|x| x.capitalize!}
       holiday1 = temp_list.join(" ")
-      binding.pry
     end
     puts "  #{holiday1.capitalize}: #{things}"}}
 end
