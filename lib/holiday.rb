@@ -73,7 +73,7 @@ def all_supplies_in_holidays(holiday_hash)
     penultimate_index = (things.length) - 2
     things.slice!(last_index)
     things.slice!(penultimate_index)
-    puts " #{holiday.capitalize}: #{things}"}}
+    puts "  #{holiday.capitalize}: #{things}"}}
 end
 
 def all_holidays_with_bbq(holiday_hash)
