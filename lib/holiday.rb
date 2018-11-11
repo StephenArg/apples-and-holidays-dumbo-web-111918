@@ -68,10 +68,12 @@ def all_supplies_in_holidays(holiday_hash)
     things = ""
     array.each{|supply|
     things += supply
-    things += " "}
+    things += ", "}
     last_index = (things.length) - 1
+    penultimate_index = (things.length) - 2
     things.slice!(last_index)
-    puts "   #{holiday.capitalize}: #{things}"}}
+    things.slice!(penultimate_index)
+    puts " #{holiday.capitalize}: #{things}"}}
 end
 
 def all_holidays_with_bbq(holiday_hash)
